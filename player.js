@@ -98,7 +98,12 @@ fullScreenBtn.addEventListener("click", () => {
         document.exitFullscreen();
     } else {
         fullScreenBtn.setAttribute("src", "icons/minimize.svg");
-        player.requestFullscreen();
+        player.requestFullscreen()
+            .then(() => {
+                if (screen.orientation.type.startsWith("portrait")) {
+                    screen.orientation.lock("portrait");
+                }
+            }).catch(error => console.log(error));
     }
 });
 
