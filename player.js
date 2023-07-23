@@ -101,7 +101,7 @@ fullScreenBtn.addEventListener("click", () => {
         player.requestFullscreen()
             .then(() => {
                 if (screen.orientation.type.startsWith("portrait")) {
-                    screen.orientation.lock("portrait");
+                    screen.orientation.lock("landscape");
                 }
             }).catch(error => console.log(error));
     }
