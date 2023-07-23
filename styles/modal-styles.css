@@ -1,0 +1,46 @@
+/* ------ Modals ----- */
+
+/* Settings modal styling */
+
+#settings .modal-content {
+  width: 280px;
+  height: 216px;
+}
+
+#settings .modal-header,
+#quality .modal-header {
+  border-bottom: none;
+}
+
+#settings .modal-body .options {
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  width: 100%;
+}
+
+@media screen and (display-mode: fullscreen) {
+  #settings .modal-dialog,
+  #quality .modal-content {
+    margin-left: 79%;
+  }
+}
+
+/* Quality */
+
+#quality .modal-content {
+  width: 280px;
+  height: 256px;
+}
+
+#quality .modal-body .options {
+  height: 3rem;
+}
+
+#quality .modal-body .options span {
+  padding-left: 2.25rem;
+}
+
+#quality .modal-body .options:first-child span {
+  padding-left: 1rem;
+}

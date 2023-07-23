@@ -1,0 +1,134 @@
+.player {
+  position: relative;
+  width: 358px;
+  height: 201px;
+}
+
+video {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+/* Removes default styling from buttons */
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Top controls styling */
+
+.top-controls {
+  position: absolute;
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  top: 5%;
+}
+
+.top-controls button {
+  z-index: 1;
+}
+
+/* Mid controls styling */
+
+.mid-controls {
+  position: absolute;
+  top: 44%;
+  left: 25%;
+  width: 50%;
+  display: none;
+  justify-content: space-between;
+}
+
+/* Bottom controls styling */
+
+.bottom-controls {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  display: none;
+}
+
+/* Timer styling */
+
+.timerWrapper {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.timerBar {
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  height: 2px;
+  width: 95%;
+  cursor: pointer;
+}
+
+.elapsedTimerBar {
+  width: 0%;
+  background-color: #00ff00;
+  height: 100%;
+}
+
+/* Volume bar */
+
+.volume-bar {
+  background-color: white;
+  height: 2px;
+  /* width: 20%; */
+  width: 72px;
+
+  align-self: center;
+  cursor: pointer;
+}
+
+.current-volume {
+  width: 100%;
+  background-color: #00ff00;
+  height: 100%;
+}
+
+.volume-unmute,
+.volume-mute {
+  margin-left: 35%;
+}
+
+/* Subtitles */
+
+.subtitles {
+  margin-left: 15.5rem;
+}
+
+/* Full screen */
+
+@media screen and (display-mode: fullscreen) {
+  .volume-mute,
+  .volume-unmute {
+    margin-left: 82%;
+  }
+}
+
+@media screen and (min-width: 700px) and (display-mode: fullscreen) {
+  .mid-controls > * {
+    width: 3rem;
+  }
+
+  button svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .subtitles {
+    margin-left: 80%;
+  }
+}
+
+/* Fade in and out for controls */
